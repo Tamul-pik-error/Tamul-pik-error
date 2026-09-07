@@ -26,18 +26,6 @@
 
 <br/>
 
-<br/>
-
-## 🤖 What I've been building lately
-
-*(auto-updated weekly by a GitHub Action that reads my recent commits and asks Claude to summarize them — see `.github/workflows/ai-update.yml`)*
-
-<!--START_SECTION:ai-->
-🤖 Been heads-down building — check back next week!
-<!--END_SECTION:ai-->
-
-<br/>
-
 ## 📊 GitHub Stats
 
 <p align="center">
