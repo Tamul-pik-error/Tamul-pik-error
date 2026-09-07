@@ -1,0 +1,74 @@
+name: AI Weekly Update
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"   # every Monday 9am UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch recent public commit messages
+        id: activity
+        run: |
+          COMMITS=$(curl -s "https://api.github.com/users/${{ github.repository_owner }}/events/public?per_page=30" \
+            | jq -r '[.[] | select(.type=="PushEvent") | .payload.commits[]?.message] | .[0:15] | join(" | ")')
+          echo "commits=$COMMITS" >> "$GITHUB_OUTPUT"
+
+      - name: Ask Claude to summarize the week
+        id: ai
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          COMMITS: ${{ steps.activity.outputs.commits }}
+        run: |
+          PROMPT="Here are my recent GitHub commit messages: ${COMMITS}. In under 30 words, write one upbeat, specific sentence for my GitHub profile README summarizing what I've been building this week. No hashtags, no quotes, just the sentence."
+
+          PAYLOAD=$(jq -n --arg model "claude-sonnet-4-6" --arg prompt "$PROMPT" \
+            '{model: $model, max_tokens: 120, messages: [{role: "user", content: $prompt}]}')
+
+          RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
+            -H "content-type: application/json" \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -d "$PAYLOAD")
+
+          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // "Been heads-down building — check back next week!"')
+          echo "summary=$TEXT" >> "$GITHUB_OUTPUT"
+
+      - name: Update README between markers
+        run: |
+          python3 - <<'PY'
+          import re, os
+
+          summary = os.environ["SUMMARY"]
+
+          with open("README.md") as f:
+              content = f.read()
+
+          new_block = f"<!--START_SECTION:ai-->\n🤖 {summary}\n<!--END_SECTION:ai-->"
+          content = re.sub(
+              r"<!--START_SECTION:ai-->.*?<!--END_SECTION:ai-->",
+              new_block,
+              content,
+              flags=re.S,
+          )
+
+          with open("README.md", "w") as f:
+              f.write(content)
+          PY
+        env:
+          SUMMARY: ${{ steps.ai.outputs.summary }}
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "🤖 AI weekly update"
+          git push
