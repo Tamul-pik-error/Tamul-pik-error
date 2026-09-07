@@ -26,10 +26,6 @@
 
 <br/>
 
-**ML / AI:** PyTorch · HuggingFace Transformers · Sentence-Transformers · scikit-learn · NumPy · Pandas · OpenCV · YOLOv8 · NLP
-**ML Infra:** AWS (SageMaker, EC2, S3) · Docker · Vector Search (HNSW) · TensorRT
-**Backend & Systems:** FastAPI · Fastify · REST APIs · WebSockets · PostgreSQL · SQLite · Git · Linux
-
 <br/>
 
 ## 🤖 What I've been building lately
@@ -59,17 +55,9 @@
 
 <br/>
 
-## 🏆 Trophies
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Tamul-pik-error&theme=radical&no-frame=true&row=1&column=6"/>
-</p>
-
-<br/>
 
 ## 🐍 Contribution Snake
-
-*(regenerated every 6 hours by GitHub Actions — see `.github/workflows/snake.yml`)*
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Tamul-pik-error/Tamul-pik-error/output/github-contribution-grid-snake-dark.svg"/>
