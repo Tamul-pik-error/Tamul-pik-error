@@ -1,62 +1,72 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2ECC71,100:1B1F23&height=220&section=header&text=Hi,%20I'm%20Tamul%20👋&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Applied%20ML%20Engineer%20%7C%20Systems%20%26%20Backend&descAlignY=55&descSize=18"/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=2ECC71&center=true&vCenter=true&width=650&lines=Building+production-grade+ML+systems;Fraud+detection+%7C+Computer+Vision+%7C+NLP;CS+Undergrad+%40+NIT+Silchar;Currently+shipping+something+new+%F0%9F%9A%80" alt="Typing SVG" />
+# Tamul
 
 </div>
 
-<br/>
+<br>
 
-## 🧑‍💻 Me?
-   - Grad trying to set up and build some stuff
+## `whoami`
 
-<br/>
+```python
+class Build:
+    def __init__(self):
+        self.stack       = ["Python", "PyTorch", "FastAPI", "AWS"]
+        self.mode        = "production, not notebooks"
+        self.constraints = {"p99_latency": "<55ms", "scale": "7M+ entities"}
 
-## 🛠️ Tech Stack
+    def output(self):
+        return "systems that survive real traffic, not just eval sets"
+
+    def __repr__(self):
+        return "<focus: where research meets infrastructure>"
+```
+
+**Recognition**
+
+| | |
+|---|---|
+| Amazon ML Summer School 2025 | Top 4.6% of 65,000+ applicants |
+| Flipkart Grid 6.0 | National Semifinalist — top 327 of 384,000+ teams |
+| Smart India Hackathon 2024 | Qualified, Idea Proposal Round |
+
+<br>
+
+## Stack
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Tamul-pik-error/Tamul-pik-error/main/assets/tech-stack-spin.gif" width="460"/>
+</p>
+
+| | |
+|---|---|
+| <img src="https://img.shields.io/badge/-%20-34D399?style=flat-square" width="12"/> **ML / AI** | PyTorch · HuggingFace Transformers · scikit-learn · OpenCV · YOLOv8 · NumPy |
+| <img src="https://img.shields.io/badge/-%20-2C9A79?style=flat-square" width="12"/> **Cloud & Infra** | AWS (SageMaker, EC2, S3) · TensorRT · HNSW Vector Search |
+| <img src="https://img.shields.io/badge/-%20-25615A?style=flat-square" width="12"/> **Systems** | FastAPI · PostgreSQL · SQLite · Docker · Git · Linux |
+| <img src="https://img.shields.io/badge/-%20-1E293B?style=flat-square" width="12"/> **Languages** | Python · C++ · Java · TypeScript · SQL |
+
+<br>
+
+## AI-Generated Weekly Log
+
+*Rewritten every Monday by a GitHub Action that reads my commit history and asks Claude to summarize it — [`.github/workflows/ai-update.yml`](.github/workflows/ai-update.yml)*
+
+```
+$ weekly-summary --source=github --model=claude-sonnet-4-6
+```
+<!--START_SECTION:ai-->
+> log empty — runs automatically after the first scheduled trigger.
+<!--END_SECTION:ai-->
+
+<br>
+
+## Activity
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Tamul-pik-error&show_icons=true&hide_border=true&hide_title=true&bg_color=00000000&title_color=f9fafb&icon_color=34d399&text_color=9ca3af" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tamul-pik-error&layout=compact&hide_border=true&hide_title=true&bg_color=00000000&title_color=f9fafb&text_color=9ca3af" height="150"/>
+</p>
 
 <div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,cpp,java,ts,postgres&theme=dark" /><br/>
-<img src="https://skillicons.dev/icons?i=pytorch,sklearn,opencv&theme=dark" /><br/>
-<img src="https://skillicons.dev/icons?i=fastapi,nodejs,sqlite,docker,git,linux&theme=dark" /><br/>
-<img src="https://skillicons.dev/icons?i=aws&theme=dark" />
-
-</div>
-
-<br/>
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Tamul-pik-error&show_icons=true&theme=radical&hide_border=true&count_private=true"/>
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tamul-pik-error&layout=compact&theme=radical&hide_border=true"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Tamul-pik-error&theme=radical&hide_border=true"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Tamul-pik-error&theme=redical&hide_border=true"/>
-</p>
-
-<br/>
-
-
-
-## 🐍 Contribution Snake
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Tamul-pik-error/Tamul-pik-error/output/github-contribution-grid-snake-dark.svg"/>
-</p>
-
-<br/>
-
-<div align="center">
-
-![Profile Views](https://komarev.com/ghpvc/?username=Tamul-pik-error&color=2ECC71&style=flat)
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1B1F23,100:2ECC71&height=100&section=footer"/>
-
+<sub><a href="https://github.com/Tamul-pik-error">github.com/Tamul-pik-error</a></sub>
 </div>
