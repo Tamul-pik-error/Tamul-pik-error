@@ -55,7 +55,7 @@ class Build:
 $ weekly-summary --source=github --model=claude-sonnet-4-6
 ```
 <!--START_SECTION:ai-->
-> log empty — runs automatically after the first scheduled trigger.
+🤖 Been heads-down building — check back next week!
 <!--END_SECTION:ai-->
 
 <br>
